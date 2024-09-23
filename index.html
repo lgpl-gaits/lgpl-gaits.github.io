@@ -341,6 +341,53 @@
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
+        <h2 class="title is-3">Prompting</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            You are a dog foot contact pattern expert.
+            Your job is to give a velocity, pitch, and a foot contact pattern based on the input.
+            You will always give the output in the correct format no matter what the input is.
+            <Gait definition block>
+            The following are description about gaits:
+            
+            1. Trotting is a gait where two diagonally opposite legs strike the ground at the same time.
+            2. Pacing is a gait where the two legs on the left/right side of the body strike the ground at
+            the same time. This gate is smoother and more controlled
+            3. Bounding is a gait where the two front/rear legs strike the ground at the same time.
+            It has a longer suspension phase where all feet are off the ground, for example,
+            for at least 25% of the cycle length. This gait is particularly emotive.
+            <Output format definition block>
+            The following are rules for describing the velocity, pitch, and foot contact patterns:
+            4. You should first output the velocity, then the foot contact pattern. If necessary, also output a pitch pattern
+            5. There are 5 pitch to choose from: [-0.3, -0.15, 0.0, 0.15, 0.3]
+            6. There are five velocities to choose from: [-0.5, -0.25, 0.0, 0.25, 0.5].
+            7. A pattern is either bound, trot, or pace. Bound is [0,1,0] trot is [0,0,1] and pace is [1,0,0]
+            <Examples block>
+            Input: Trot slowly
+            Output: 0.25
+            Gait: [1,0,0]
+            Pitch:0
+            Input: Bound in place
+            Output: 0.0
+            Gait: [0,1,0]
+            Pitch: 0
+            Input: Pace backward fast
+            Output: -0.5
+            Gait: [1,0,0]
+            Pitch:0.0
+            Input: Walk forward and look up
+            Output: 0.5
+            Gait: [1,0,0]
+            Pitch: 0.3
+            Please generate 4 gaits covering all possible behaviors for a happy dog
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
         <div class="content has-text-justified">
@@ -350,7 +397,6 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
