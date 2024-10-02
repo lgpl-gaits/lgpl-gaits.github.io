@@ -314,22 +314,24 @@
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Prompting</h3>
+        <h3 class="title is-4">Results</h3>
         <div class="content has-text-justified">
           <p>
-            We use in-context prompting to parameterize quadruped gaits
+            We found that LGPL was preferred 76.67 ± 10.59% of the compared to baseline methods.
           </p>
         </div>
         <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/forward.mp4"
-                    type="video/mp4">
-          </video>
+          <!-- Display the first image (results.jpg) -->
+          <img id="results-image"
+               src="./static/images/results.jpg"
+               alt="Results"
+               style="width: 75%; margin-bottom: 20px;">
+          
+          <!-- Display the second image (table.jpg) -->
+          <img id="table-image"
+               src="./static/images/table.jpg"
+               alt="Table"
+               style="width: 75%;">
         </div>
         <!--/ Re-rendering. -->
 
